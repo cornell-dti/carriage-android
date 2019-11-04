@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Rider</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="carriage">Carriage</string>
+    <string name="with_culift">with CULift</string>
+    <string name="netID_signin">Sign in using your NetID</string>
+    <string name="netid">NetID</string>
+    <string name="password">Password</string>
+    <string name="forgotText"><a href="http://www.google.com"> <u> Forgot your password? </u> </a></string>
+    <string name="sign_in">Sign In</string>
 </resources>

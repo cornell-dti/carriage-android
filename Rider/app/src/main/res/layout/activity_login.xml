@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/carriageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/carriage"
+            android:textColor="@color/blackColor"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/CULiftText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="@string/with_culift"
+            android:textSize="30dp" />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/signText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/netID_signin"
+            android:textSize="15dp" />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edittext_back"
+            android:hint="@string/netid"
+            android:padding="5dp" />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/passwordBox"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edittext_back"
+            android:hint="@string/password"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:autoLink="all"
+                android:linksClickable="true"
+                android:text="@string/forgotText"
+                android:textSize="10dp" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="1dp" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:onClick="signIn"
+                android:text="@string/sign_in"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/whiteColor" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
