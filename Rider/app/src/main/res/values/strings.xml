@@ -10,4 +10,5 @@
     <string name="password">Password</string>
     <string name="forgotText"><a href="http://www.google.com"> <u> Forgot your password? </u> </a></string>
     <string name="sign_in">Sign In</string>
+    <string name="your_profile">Your Profile</string>
 </resources>

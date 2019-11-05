@@ -6,4 +6,5 @@
     <color name="whiteColor">#FCFAFB</color>
     <color name="blackColor">#070707</color>
     <color name="eTextColor">#DBDBDB</color>
+    <color name="profileColor">#F5F4F4</color>
 </resources>

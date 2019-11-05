@@ -70,7 +70,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
             <Space
                 android:layout_width="15dp"
                 android:layout_height="1dp" />
@@ -91,14 +90,14 @@
                 android:layout_height="1dp" />
 
             <Button
-                android:layout_width="100dp"
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:onClick="signIn"
                 android:text="@string/sign_in"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/whiteColor" />
-
 
         </LinearLayout>
 

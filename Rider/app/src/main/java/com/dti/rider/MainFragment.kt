@@ -1,4 +1,4 @@
-package com.example.rider
+package com.dti.rider
 
 
 import android.os.Bundle
@@ -10,14 +10,15 @@ import android.view.ViewGroup
 /**
  * A simple [Fragment] subclass.
  */
-class ThirdFragment : Fragment() {
+class MainFragment : Fragment() {
 
+    // 3 containers
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third, container, false)
+        return inflater.inflate(R.layout.fragment_main, container, false)
     }
 
 

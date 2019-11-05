@@ -1,6 +1,5 @@
-package com.example.rider
+package com.dti.rider
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentTransaction

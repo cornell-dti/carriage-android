@@ -1,4 +1,4 @@
-package com.example.rider
+package com.dti.rider
 
 import org.junit.Test
 
