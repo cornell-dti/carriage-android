@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Rider</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="carriage">Carriage</string>
     <string name="with_culift">with CULift</string>
@@ -11,4 +9,12 @@
     <string name="forgotText"><a href="http://www.google.com"> <u> Forgot your password? </u> </a></string>
     <string name="sign_in">Sign In</string>
     <string name="your_profile">Your Profile</string>
+    <string name="request_text">+  Request Ride</string>
+    <string name="server_client_id">322014396101-u417c510hoasgjioroootltc8ki3qm56.apps.googleusercontent.com</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="account_info">Account Info</string>
+    <string name="personal_info">Personal Info</string>
 </resources>

@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
     <item
-        android:id="@+id/navigationOne"
-        android:title="Label"
-        android:icon="@drawable/ic_action_star"
+        android:id="@+id/navigationProfile"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_person_black_24dp"
+        app:showAsAction="never"
         />
 
     <item
-        android:id="@+id/navigationTwo"
-        android:title="Label"
-        android:icon="@drawable/ic_action_eye"
+        android:id="@+id/navigationSetting"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="never"
         />
 
     <item
-        android:id="@+id/navigationThree"
-        android:title="Label"
-        android:icon="@drawable/ic_action_location"
+        android:id="@+id/navigationNotification"
+        android:title="@string/notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        app:showAsAction="never"
         />
 </menu>
