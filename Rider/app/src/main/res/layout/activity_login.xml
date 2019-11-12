@@ -16,20 +16,20 @@
 
         <TextView
             android:id="@+id/carriageText"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/carriage"
-            android:textColor="@color/blackColor"
-            style="@style/TextAppearance.MaterialComponents.Headline3" />
+            android:textColor="@color/blackColor" />
 
         <TextView
             android:id="@+id/CULiftText"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
-            android:text="@string/with_culift"
-            style="@style/TextAppearance.MaterialComponents.Headline4" />
+            android:text="@string/with_culift" />
 
         <Space
             android:layout_width="1dp"
@@ -37,11 +37,11 @@
 
         <TextView
             android:id="@+id/signText"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center"
-            android:text="@string/netID_signin"
-            style="@style/TextAppearance.MaterialComponents.Body1" />
+            android:text="@string/netID_signin" />
 
         <Space
             android:layout_width="1dp"

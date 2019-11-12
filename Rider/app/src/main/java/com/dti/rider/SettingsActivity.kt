@@ -1,5 +1,6 @@
 package com.dti.rider
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,23 +10,20 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.tasks.OnCompleteListener
 
+
 class SettingsActivity : AppCompatActivity() {
 
-    lateinit var mGoogleSignInClient : GoogleSignInClient
+    lateinit var mGoogleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        val button : Button = findViewById(R.id.button_sign_out)
-        button.setOnClickListener(View.OnClickListener {
-            fun onClick(v: View) {
-                when (v.id) {
-                    // ...
-                    R.id.button_sign_out -> signOut()
-                }// ...
-            }
+        val signOutButton: Button = findViewById(R.id.button_sign_out)
+        signOutButton.setOnClickListener(View.OnClickListener {
+            signOut()
         })
+
 
         val acct = GoogleSignIn.getLastSignedInAccount(this)
         if (acct != null) {
@@ -37,14 +35,20 @@ class SettingsActivity : AppCompatActivity() {
 
     }
 
+    private fun goLogInScreen() {
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
+    }
+
     private fun signOut() {
         mGoogleSignInClient.signOut()
             .addOnCompleteListener(this, OnCompleteListener<Void> {
                 Toast.makeText(this, "Signed Out Successfully", Toast.LENGTH_SHORT).show()
-                finish()
+                goLogInScreen()
             })
-
     }
+
 }
 
 
