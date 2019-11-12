@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nextride"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="false"
+    android:layout_centerVertical="false"
+    android:layout_marginLeft="7pt"
+    android:layout_marginRight="7pt"
+    android:background="@drawable/rectangle"
+    android:elevation="2dp"
+    android:paddingBottom="5dp"
+    app:layout_constraintCircleRadius="3pt">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5pt"
+        android:background="@drawable/rectanglesmall"
+        android:drawablePadding="5pt"
+        android:gravity="center"
+        android:paddingTop="2pt"
+        android:paddingBottom="2pt"
+        android:text="Your driver will arrive in 2 minutes"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="15pt"
+        android:text="From"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textFromPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textFrom"
+        android:layout_alignLeft="@id/textFrom"
+        android:text="Upson Hall"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imageArrow"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textFrom"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@id/textFromPlace" />
+
+    <TextView
+        android:id="@+id/textTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textFrom"
+        android:paddingLeft="82pt"
+        android:paddingTop="15pt"
+        android:text="To"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textToPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTo"
+        android:layout_marginLeft="62pt"
+        android:layout_toRightOf="@id/textFromPlace"
+        android:text="Uris Hall"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imageAvatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/textFromPlace"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/person" />
+
+    <TextView
+        android:id="@+id/textRiderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textFromPlace"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/imageAvatar"
+        android:text="Davea Butler"
+        android:textColor="#000000"
+        android:textFontWeight="normal"
+        android:textSize="18sp"
+        app:fontFamily='"SFProText"' />
+
+    <TextView
+        android:id="@+id/textRiderPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textRiderName"
+        android:layout_alignLeft="@id/textRiderName"
+        android:layout_marginTop="5dp"
+        android:text=" +1 323-231-5234"
+        android:textSize="18sp" />
+
+</RelativeLayout>

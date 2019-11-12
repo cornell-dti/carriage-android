@@ -1,27 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="10pt"
+    android:background="#ffffff"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <TextView
+        android:id="@+id/textHiRider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_navigation"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/whiteColor"
-        app:menu="@menu/navigation"
-        />
+        android:layout_marginLeft="7pt"
+        android:layout_marginTop="10pt"
+        android:layout_marginRight="7pt"
+        android:drawableRight="@drawable/ic_menu_black_24dp"
+        android:text="Hi, Aiden!"
+        android:textColor="#000000"
+        android:textFontWeight='"bold" '
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily='"SFProDisplay"' />
 
-    <FrameLayout
+    <TextView
+        android:id="@+id/textNextRide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7pt"
+        android:layout_marginBottom="5pt"
+        android:paddingTop="5dp"
+        android:text="Next Ride"
+        android:textColor="#4a4a4a"
+        android:textFontWeight='"600"'
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily='"SFProDisplay"'
+        tools:textSize="20sp"
+        tools:textStyle="bold" />
+
+    <include
+        layout="@layout/next_ride"
+        tools:layout_marginLeft="7pt" />
+
+    <TextView
+        android:id="@+id/textUpcomingRides"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7pt"
+        android:layout_marginBottom="5pt"
+        android:paddingTop="20dp"
+        android:text="Upcoming Rides"
+        android:textFontWeight='"normal"'
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily='"SFProText"' />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/customContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:divider="@drawable/empty_tall_divider"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <include layout="@layout/upcoming_ride" />
+
+            <include layout="@layout/upcoming_ride" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame_layout"
-        android:layout_above="@+id/bottom_navigation"
-        />
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="#ffffff">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/buttonrequestride"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20pt"
+            android:layout_marginTop="18pt"
+            android:layout_marginRight="20pt"
+            android:background="@drawable/rectanglesmall"
+            android:text="+ Request Ride"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textFontWeight="bold"
+            android:textSize="18dp" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
