@@ -11,7 +11,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/header_margin"
         android:background="@color/profileColor">
 
         <TextView
@@ -22,7 +21,8 @@
             android:background="@color/profileColor"
             android:text="@string/settings"
             android:textColor="@color/blackColor"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="@string/settings"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -47,15 +47,16 @@
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/profilePicture"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="@dimen/image_margin"
                         android:layout_marginTop="@dimen/image_margin"
-                        android:layout_marginBottom="@dimen/image_margin"
-                        android:background="#A9A9A9"
-                        android:src="@drawable/ic_person_black_24dp" />
-
+                        android:src="@drawable/ic_person_black_24dp"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="#d3d3d3"
+                        app:civ_border_color="#d3d3d3"/>
                 </LinearLayout>
 
                 <RelativeLayout
@@ -260,7 +261,7 @@
     <Button
         android:id="@+id/button_sign_out"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="@dimen/view_margin"
         android:background="@color/colorPrimary"
         android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"

@@ -18,7 +18,7 @@ import android.widget.Toast
 
 class LoginActivity : AppCompatActivity() {
 
-    private var RC_SIGN_IN = 0
+    private var RC_SIGN_IN = 1001
     private lateinit var signInButton: SignInButton
     private lateinit var mGoogleSignInClient: GoogleSignInClient
 
@@ -26,12 +26,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
         //Initializing Views
         signInButton = findViewById(R.id.sign_in_button)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()
+            .requestProfile()
             .build()
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
@@ -43,6 +43,7 @@ class LoginActivity : AppCompatActivity() {
         val signInIntent = mGoogleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
+
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

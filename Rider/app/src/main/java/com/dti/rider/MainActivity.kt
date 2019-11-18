@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
-import android.widget.Toolbar
-import kotlinx.android.synthetic.main.activity_main.*
-
+import androidx.appcompat.app.ActionBar
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,8 +14,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        actionBar?.setTitle("Hi Aiden!")
 
+        getSupportActionBar()?.setDisplayShowTitleEnabled(false);
 
         val btn_profile = findViewById(R.id.profileButton) as Button
         btn_profile.setOnClickListener {

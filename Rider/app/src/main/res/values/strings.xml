@@ -25,4 +25,6 @@
     <string name="terms_of_service_privacy_policy"><![CDATA[Terms of service & Privacy Policy]]></string>
     <string name="choose_what_data_you_share_with">Choose what data you share with</string>
     <string name="sign_out">Sign Out</string>
+    <string name="request_ride">Request Ride</string>
+    <string name="profile_picture">Profile Picture</string>
 </resources>

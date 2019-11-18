@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/carriage"
+            android:contentDescription="@string/carriage"
             android:textColor="@color/blackColor" />
 
         <TextView
@@ -29,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
+            android:contentDescription="@string/with_culift"
             android:text="@string/with_culift" />
 
         <Space
@@ -41,7 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center"
-            android:text="@string/netID_signin" />
+            android:text="@string/netID_signin"
+            android:contentDescription="@string/netID_signin"/>
 
         <Space
             android:layout_width="1dp"
@@ -52,7 +55,8 @@
             android:layout_height="45dp"
             android:background="@drawable/edittext_back"
             android:hint="@string/netid"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:contentDescription="@string/netid"/>
 
         <Space
             android:layout_width="1dp"
@@ -64,6 +68,7 @@
             android:layout_height="45dp"
             android:background="@drawable/edittext_back"
             android:hint="@string/password"
+            android:contentDescription="@string/password"
             android:padding="5dp" />
 
         <LinearLayout
@@ -83,7 +88,8 @@
                 android:autoLink="all"
                 android:linksClickable="true"
                 android:text="@string/forgotText"
-                android:textSize="10dp" />
+                android:textSize="10dp"
+                android:contentDescription="@string/forgotText"/>
 
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/sign_in_button"
@@ -91,7 +97,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/whiteColor" />
+                android:textColor="@color/whiteColor"
+                android:contentDescription="@string/sign_in"/>
 
         </LinearLayout>
 
