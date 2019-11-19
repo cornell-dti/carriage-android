@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,9 +9,11 @@
     tools:context=".ProfileActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/CVProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/profileColor">
+        android:background="@color/profileColor"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/profileHeader"
@@ -19,229 +21,199 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/profileColor"
+            android:contentDescription="@string/profile"
             android:text="@string/your_profile"
             android:textColor="@color/blackColor"
-            android:textStyle="bold"
-            android:contentDescription="@string/profile"/>
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/CVTitle"
         android:layout_width="match_parent"
-        android:layout_height="120dp">
+        android:layout_height="120dp"
+        android:layout_marginBottom="@dimen/view_margin"
+        app:layout_constraintTop_toBottomOf="@+id/CVProfile">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginTop="@dimen/image_margin"
+                android:contentDescription="@string/profile_picture"
+                android:src="@drawable/ic_person_black_24dp"
+                app:civ_border_color="#d3d3d3"
+                app:civ_border_width="2dp"
+                app:civ_circle_background_color="#d3d3d3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameText"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:drawableRight="@drawable/ic_edit_black_24dp"
+                android:drawablePadding="6dp"
+                android:text="Aiden Kim"
+                android:textColor="@color/blackColor"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/profilePicture"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <TextView
+                android:id="@+id/dateJoinedText"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="32dp"
+                android:text="Joined 06/2019"
+                app:layout_constraintLeft_toLeftOf="@+id/profilePicture"
+                app:layout_constraintTop_toTopOf="@id/nameText" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/profilePicture"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginLeft="@dimen/image_margin"
-                        android:layout_marginTop="@dimen/image_margin"
-                        android:src="@drawable/ic_person_black_24dp"
-                        android:contentDescription="@string/profile_picture"
-                        app:civ_border_width="2dp"
-                        app:civ_circle_background_color="#d3d3d3"
-                        app:civ_border_color="#d3d3d3"/>
-
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/nameText"
-                        style="@style/TextAppearance.MaterialComponents.Headline5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/image_margin"
-                        android:layout_marginTop="25dp"
-                        android:drawableRight="@drawable/ic_settings_black_24dp"
-                        android:drawablePadding="6dp"
-                        android:text="Aiden Kim"
-                        android:textColor="@color/blackColor"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/dateJoinedText"
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/image_margin"
-                        android:layout_marginTop="55dp"
-                        android:text="Joined 06/2019" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvAccountInfo"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginTop="@dimen/view_margin">
+        android:layout_marginTop="@dimen/view_margin"
+        android:layout_marginBottom="@dimen/view_margin"
+        app:layout_constraintTop_toBottomOf="@+id/CVTitle">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/accountInfoText"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginTop="10dp"
+                android:text="@string/account_info"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
-                <TextView
-                    android:id="@+id/accountInfoText"
-                    style="@style/TextAppearance.MaterialComponents.Headline5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/image_margin"
-                    android:text="@string/account_info"
-                    android:textStyle="bold">
+            <TextView
+                android:id="@+id/emailText"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_margin"
+                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginTop="@dimen/split_margin"
+                android:drawableLeft="@drawable/ic_email_black_24dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawablePadding="@dimen/image_margin"
+                android:gravity="center_vertical"
+                android:text="yk568@cornell.edu"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
-                </TextView>
+            <View
+                android:id="@+id/accountSplit"
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="15dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/emailText" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <TextView
+                android:id="@+id/phoneText"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_margin"
+                android:layout_marginLeft="@dimen/image_margin"
+                android:drawableLeft="@drawable/ic_phone_black_24dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawablePadding="@dimen/image_margin"
+                android:gravity="center_vertical"
+                android:text="Add your number"
+                app:layout_constraintTop_toTopOf="@id/accountSplit"></TextView>
 
-                    <TextView
-                        android:id="@+id/emailText"
-                        style="@style/TextAppearance.AppCompat.Medium"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/text_margin"
-                        android:layout_marginLeft="@dimen/image_margin"
-                        android:drawableLeft="@drawable/ic_email_black_24dp"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:drawablePadding="@dimen/image_margin"
-                        android:gravity="center_vertical"
-                        android:text="yk568@cornell.edu"></TextView>
 
-                    <View
-                        android:layout_width="303dp"
-                        android:layout_height="1dp"
-                        android:layout_marginLeft="56dp"
-                        android:layout_marginRight="@dimen/text_margin"
-                        android:background="@android:color/darker_gray" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/phoneText"
-                        style="@style/TextAppearance.AppCompat.Medium"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/text_margin"
-                        android:layout_marginLeft="@dimen/image_margin"
-                        android:drawableLeft="@drawable/ic_phone_black_24dp"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:drawablePadding="@dimen/image_margin"
-                        android:gravity="center_vertical"
-                        android:text="+1 657-500-1311">
-
-                    </TextView>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvPersonalInfo"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginTop="@dimen/view_margin">
+        android:layout_marginTop="@dimen/view_margin"
+        android:layout_marginBottom="@dimen/view_margin"
+        app:layout_constraintTop_toBottomOf="@+id/cvAccountInfo">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/personalInfoText"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/image_margin"
+                android:text="@string/personal_info"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
-                <TextView
-                    android:id="@+id/personalInfoText"
-                    style="@style/TextAppearance.MaterialComponents.Headline5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/image_margin"
-                    android:text="@string/personal_info"
-                    android:textStyle="bold">
+            <TextView
+                android:id="@+id/addressText"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_margin"
+                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginTop="@dimen/split_margin"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawablePadding="@dimen/image_margin"
+                android:gravity="center_vertical"
+                android:text="How should we address you?"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
-                </TextView>
+            <View
+                android:id="@+id/personalSplit"
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="15dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/addressText" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/addressText"
-                        style="@style/TextAppearance.AppCompat.Medium"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/text_margin"
-                        android:layout_marginLeft="@dimen/image_margin"
-                        android:drawableLeft="@drawable/ic_person_black_24dp"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:drawablePadding="@dimen/image_margin"
-                        android:gravity="center_vertical"
-                        android:text="He/Him/His">
-
-                    </TextView>
-
-                    <View
-                        android:layout_width="303dp"
-                        android:layout_height="1dp"
-                        android:layout_marginLeft="56dp"
-                        android:layout_marginRight="@dimen/text_margin"
-                        android:background="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/accessibilityText"
-                        style="@style/TextAppearance.AppCompat.Medium"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/text_margin"
-                        android:layout_marginLeft="@dimen/image_margin"
-                        android:drawableLeft="@drawable/ic_accessible_black_24dp"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:drawablePadding="@dimen/image_margin"
-                        android:gravity="center_vertical"
-                        android:text="Accessibility">
-
-                    </TextView>
+            <TextView
+                android:id="@+id/accessibilityText"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_margin"
+                android:layout_marginLeft="@dimen/image_margin"
+                android:drawableLeft="@drawable/ic_accessible_black_24dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawablePadding="@dimen/image_margin"
+                android:gravity="center_vertical"
+                android:text="Any accessibility assistance?"
+                app:layout_constraintTop_toTopOf="@id/personalSplit"></TextView>
 
 
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
