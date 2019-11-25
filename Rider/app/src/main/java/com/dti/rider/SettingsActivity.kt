@@ -15,11 +15,9 @@ import com.google.android.gms.common.api.GoogleApiClient
 
 class SettingsActivity : AppCompatActivity() {
 
-    lateinit var mGoogleSignInClient: GoogleSignInClient
-    lateinit var mGoogleApiClient: GoogleApiClient
-
-    lateinit var name : TextView
-    lateinit var email : TextView
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
+    private lateinit var name : TextView
+    private lateinit var email : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

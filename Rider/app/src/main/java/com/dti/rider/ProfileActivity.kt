@@ -18,9 +18,9 @@ import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
 
-    lateinit var mGoogleSignInClient : GoogleSignInClient
-    lateinit var name : TextView
-    lateinit var email : TextView
+    private lateinit var mGoogleSignInClient : GoogleSignInClient
+    private lateinit var name : TextView
+    private lateinit var email : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
