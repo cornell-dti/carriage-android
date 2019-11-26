@@ -1,17 +1,18 @@
 package com.dti.rider
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.SignInButton
-import com.google.android.gms.tasks.Task
 import com.google.android.gms.common.api.ApiException
-import android.util.Log
-import android.widget.Toast
+import com.google.android.gms.tasks.Task
 
 
 class LoginActivity : AppCompatActivity() {
@@ -34,7 +35,21 @@ class LoginActivity : AppCompatActivity() {
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        signInButton.setOnClickListener { signIn() }
+        signInButton.setOnClickListener {
+            fun onClick(v: View) {
+                when (v.getId()) {
+                    R.id.sign_in_button -> signIn()
+                }
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val account = GoogleSignIn.getLastSignedInAccount(this)
+        if (account != null) {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
     }
 
     private fun signIn() {
@@ -61,18 +76,10 @@ class LoginActivity : AppCompatActivity() {
             if (domain == "cornell.edu") {
                 startActivity(Intent(this, MainActivity::class.java))
             }
+
         } catch (e: ApiException) {
             Log.w("Google Sign In Error", "signInResult:failed code=" + e.statusCode)
             Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show()
-        }
-
-    }
-
-    override fun onStart() {
-        super.onStart()
-        val account = GoogleSignIn.getLastSignedInAccount(this)
-        if (account != null) {
-            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }
