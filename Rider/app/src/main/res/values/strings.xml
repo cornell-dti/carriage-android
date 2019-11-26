@@ -10,7 +10,8 @@
     <string name="sign_in">Sign In</string>
     <string name="your_profile">Your Profile</string>
     <string name="request_text">+  Request Ride</string>
-    <string name="server_client_id">322014396101-u417c510hoasgjioroootltc8ki3qm56.apps.googleusercontent.com</string>
+    <string name="app_server_client_id">322014396101-u417c510hoasgjioroootltc8ki3qm56.apps.googleusercontent.com</string>
+    <string name="server_client_id">322014396101-8u88pc3q00v6dre4doa64psr9349bhum.apps.googleusercontent.com</string>
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
     <string name="notifications">Notifications</string>

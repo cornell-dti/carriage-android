@@ -3,13 +3,9 @@ package com.dti.rider
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.auth.api.signin.*
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
@@ -31,18 +27,22 @@ class LoginActivity : AppCompatActivity() {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()
             .requestProfile()
+            //.requestIdToken(getString(R.string.server_client_id))
             .build()
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
         signInButton.setOnClickListener {
-            fun onClick(v: View) {
-                when (v.getId()) {
-                    R.id.sign_in_button -> signIn()
-                }
-            }
+            signIn()
         }
+
     }
+
+    /*
+    private fun updateUI(account: GoogleSignInAccount)
+    {
+    }
+    */
 
     override fun onStart() {
         super.onStart()
@@ -70,15 +70,21 @@ class LoginActivity : AppCompatActivity() {
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
             val account = completedTask.getResult(ApiException::class.java)
+            val idToken = account!!.idToken
             val email = account?.getEmail()
             val split = email?.split("@")
             val domain = split?.get(1) //This Will Give You The Domain After '@'
+
             if (domain == "cornell.edu") {
                 startActivity(Intent(this, MainActivity::class.java))
             }
 
         } catch (e: ApiException) {
-            Log.w("Google Sign In Error", "signInResult:failed code=" + e.statusCode)
+            Log.w("Google Sign In Error", "signInResult:failed code: " + e.statusCode)
+            Log.w(
+                "Google Sign In Error",
+                "signInResult:failed message: " + GoogleSignInStatusCodes.getStatusCodeString(e.statusCode)
+            )
             Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show()
         }
     }
