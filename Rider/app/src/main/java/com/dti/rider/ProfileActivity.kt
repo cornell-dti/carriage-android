@@ -18,9 +18,9 @@ import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
 
-    private lateinit var mGoogleSignInClient : GoogleSignInClient
-    private lateinit var name : TextView
-    private lateinit var email : TextView
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
+    private lateinit var name: TextView
+    private lateinit var email: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,6 @@ class ProfileActivity : AppCompatActivity() {
 
         getSupportActionBar()?.setTitle(Html.fromHtml("<font color='#070707'>Schedule</font>"))
         getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp)
-
 
         name = findViewById(R.id.nameText)
         email = findViewById(R.id.emailText)
@@ -43,7 +42,6 @@ class ProfileActivity : AppCompatActivity() {
         }
 
     }
-
 
 
 }

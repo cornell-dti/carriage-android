@@ -6,8 +6,10 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.*
+import com.google.android.gms.common.Scopes
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.api.Scope
 import com.google.android.gms.tasks.Task
 
 
@@ -24,7 +26,10 @@ class LoginActivity : AppCompatActivity() {
         //Initializing Views
         signInButton = findViewById(R.id.sign_in_button)
 
+        val serverClientId = getString(R.string.server_client_id)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestScopes(Scope(Scopes.DRIVE_APPFOLDER))
+            .requestServerAuthCode(serverClientId)
             .requestEmail()
             .requestProfile()
             //.requestIdToken(getString(R.string.server_client_id))
@@ -37,12 +42,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
-
-    /*
-    private fun updateUI(account: GoogleSignInAccount)
-    {
-    }
-    */
 
     override fun onStart() {
         super.onStart()
@@ -70,11 +69,11 @@ class LoginActivity : AppCompatActivity() {
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
             val account = completedTask.getResult(ApiException::class.java)
+            val authCode = account!!.serverAuthCode
             val idToken = account!!.idToken
             val email = account?.getEmail()
             val split = email?.split("@")
-            val domain = split?.get(1) //This Will Give You The Domain After '@'
-
+            val domain = split?.get(1)
             if (domain == "cornell.edu") {
                 startActivity(Intent(this, MainActivity::class.java))
             }
