@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="margin">12dp</dimen>
+
+    <dimen name="nameText">35sp</dimen>
+    <dimen name="rideTextSize">22sp</dimen>
+
+    <dimen name="currRideHeight">160dp</dimen>
+    <dimen name="drivArrivalPad">3dp</dimen>
+
+    <dimen name="drivArrivalTextSize">16sp</dimen>
+
+    <dimen name="nextRideInCardLeftMarg">25dp</dimen>
+    <dimen name="nextRideInCardTopMarg">15dp</dimen>
+
+    <dimen name="cornerRadius">5dp</dimen>
+
+    <dimen name="cardSizeUR">23sp</dimen>
+    <dimen name="elevation">3dp</dimen>
+</resources>
