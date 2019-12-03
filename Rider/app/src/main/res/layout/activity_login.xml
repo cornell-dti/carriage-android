@@ -39,58 +39,18 @@
         android:text="@string/netID_signin"
         app:layout_constraintTop_toBottomOf="@id/CULiftText" />
 
-    <EditText
-        android:id="@+id/netIDBox"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="@dimen/view_margin"
-        android:background="@drawable/edittext_back"
-        android:contentDescription="@string/netid"
-        android:hint="@string/netid"
-        android:padding="5dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signText" />
-
-    <EditText
-        android:id="@+id/passwordBox"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="@dimen/view_margin"
-        android:background="@drawable/edittext_back"
-        android:contentDescription="@string/password"
-        android:hint="@string/password"
-        android:padding="5dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/netIDBox" />
-
-
-    <TextView
-        android:id="@+id/forgotPassword"
-        android:layout_width="130dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="20dp"
-        android:autoLink="all"
-        android:contentDescription="@string/forgotText"
-        android:linksClickable="true"
-        android:text="@string/forgotText"
-        android:textSize="10dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordBox" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="80dp"
         android:contentDescription="@string/sign_in"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/whiteColor"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordBox" />
+        app:layout_constraintTop_toBottomOf="@id/signText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
