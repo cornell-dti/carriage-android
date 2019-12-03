@@ -11,6 +11,17 @@ import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.Scope
 import com.google.android.gms.tasks.Task
+import cz.msebera.android.httpclient.HttpResponse
+import cz.msebera.android.httpclient.NameValuePair
+import cz.msebera.android.httpclient.client.ClientProtocolException
+import cz.msebera.android.httpclient.client.HttpClient
+import cz.msebera.android.httpclient.client.entity.UrlEncodedFormEntity
+import cz.msebera.android.httpclient.client.methods.HttpPost
+import cz.msebera.android.httpclient.impl.client.HttpClientBuilder
+import cz.msebera.android.httpclient.message.BasicNameValuePair
+import cz.msebera.android.httpclient.util.EntityUtils
+import java.io.IOException
+import kotlin.collections.ArrayList
 
 
 class LoginActivity : AppCompatActivity() {
@@ -32,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
             .requestServerAuthCode(serverClientId)
             .requestEmail()
             .requestProfile()
-            //.requestIdToken(getString(R.string.server_client_id))
+            .requestIdToken(getString(R.string.server_client_id))
             .build()
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
@@ -76,6 +87,23 @@ class LoginActivity : AppCompatActivity() {
             val domain = split?.get(1)
             if (domain == "cornell.edu") {
                 startActivity(Intent(this, MainActivity::class.java))
+            }
+            val httpClient: HttpClient = HttpClientBuilder.create().build();
+            val httpPost = HttpPost("http://10.0.2.2:3000")
+//"https://localhost:3000/verify"
+            try {
+                val nameValuePairs: MutableList<NameValuePair> =
+                    ArrayList<NameValuePair>(1)
+                nameValuePairs.add(BasicNameValuePair("idToken", idToken))
+                httpPost.entity = UrlEncodedFormEntity(nameValuePairs)
+                val response: HttpResponse = httpClient.execute(httpPost)
+                val statusCode = response.statusLine.statusCode
+                val responseBody = EntityUtils.toString(response.entity)
+                Log.i("Succesful Sign In", "Signed in as: $responseBody")
+            } catch (e: ClientProtocolException) {
+                Log.e("Token Error", "Error sending ID token to backend.", e)
+            } catch (e: IOException) {
+                Log.e("Token Error", "Error sending ID token to backend.", e)
             }
 
         } catch (e: ApiException) {

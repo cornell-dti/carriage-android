@@ -38,6 +38,7 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.0-alpha05'
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     implementation group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
+    implementation "cz.msebera.android:httpclient:4.4.1.2"
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
