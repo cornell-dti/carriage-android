@@ -1,4 +1,61 @@
 <resources>
     <string name="app_name">Rider</string>
+<<<<<<< Updated upstream
     
+=======
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="riderName">Hi Aiden!</string>
+
+    <string name="nextRide">Next Ride</string>
+    <string name="driverArrival">Your driver will arrive in 2 minutes</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="currLoc">Upson Hall</string>
+    <string name="finalDest">Uris Hall</string>
+    <string name="driverName">Davea Butler</string>
+    <string name="driverNum">+1 323-231-5234</string>
+
+    <string name="upcomingRides">Upcoming Rides</string>
+    <string name="month">OCT</string>
+    <string name="day">18th</string>
+    <string name="time">12:00 PM</string>
+    <string name="finalDest1">Cascadilla Hall</string>
+    <string name="confirmation">Ride Confirmed</string>
+    <string name="driverName1">Adam Denisov</string>
+    <string name="driverNum1">+1 123-456-7890</string>
+
+    <string name="rideHist">Ride History</string>
+
+    <string name="requestRide">+ Request Ride</string>
+
+
+    <string name="rideConfirmation">Request Sent to the Dispatcher!</string>
+    <string name="confDescrip">You’ll be notified via in-app notification and email for confirmation of your ride</string>
+    <string name="gotIt">Got it!</string>
+
+
+    <string name="schedule">Schedule</string>
+    <string name="rideInfo">Ride Info</string>
+
+    <string name="gatesHall">Gates Hall</string>
+    <string name="statlerHall">Statler Hall</string>
+
+    <string name="addy1">124 Hoy Rd, Ithaca, NY 14850</string>
+    <string name="addy2">109 Tower Rd, Ithaca, NY 14853</string>
+    <string name="addy3">7 East Ave, Ithaca, NY 14853</string>
+    <string name="addy4">109 Tower Rd, Ithaca, NY 14850</string>
+
+    <string name="pickupTime">3:15 PM</string>
+    <string name="pickup">Pickup</string>
+
+    <string name="dropoffTime">3:20 PM</string>
+    <string name="dropoff">Dropoff</string>
+
+
+>>>>>>> Stashed changes
 </resources>

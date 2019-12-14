@@ -4,4 +4,20 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="whiteColor">#FCFAFB</color>
+<<<<<<< Updated upstream
+=======
+
+    <color name="black">#000000</color>
+    <color name="grey">#848484</color>
+    <color name="darkerGrey">#4a4a4a</color>
+    <color name="green">#4caf50</color>
+
+    <color name="backgroundColor">#FDD8D8D8</color>
+
+
+    <color name="descriptionColor">#F3A6A6A6</color>
+
+
+    
+>>>>>>> Stashed changes
 </resources>

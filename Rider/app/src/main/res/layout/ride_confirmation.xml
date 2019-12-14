@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/checkCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+
+        app:srcCompat="@drawable/green_check"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
+    <TextView
+        android:id="@+id/requestSentDis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rideConfirmation"
+        android:textSize="@dimen/rideConfTS"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/rideConfTopMargin"
+        android:layout_marginRight="@dimen/rideConfLRMargin"
+        android:layout_marginLeft="@dimen/rideConfLRMargin"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkCircle">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/rideConfDescriptionLRMargin"
+        android:paddingRight="@dimen/rideConfDescriptionLRMargin"
+        android:layout_marginTop="@dimen/rideConfDescriptionTopMargin"
+        android:gravity="center_horizontal"
+        android:text="@string/confDescrip"
+        android:textSize="@dimen/rideConfDesTS"
+        android:textColor="@color/descriptionColor"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/requestSentDis">
+
+    </TextView>
+
+    <Button
+        android:layout_marginRight="@dimen/button_margin"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gotIt"
+        android:gravity="center"
+        android:textColor="@color/whiteColor"
+        android:layout_marginBottom="@dimen/button_margin"
+
+        android:background="@drawable/button_background"
+
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </Button>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

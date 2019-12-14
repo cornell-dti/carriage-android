@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/whiteColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/leftChev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="110dp"
+
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chevron_left_b">
+
+
+    </androidx.appcompat.widget.AppCompatImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/schedule"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upcomingRides"
+        android:textColor="@color/black"
+        android:textSize="33sp"
+        android:textStyle="bold"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:src="@drawable/map"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    </ImageView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rideInfoCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <TextView
+                android:id="@+id/rideInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rideInfo"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/darkerGrey"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/firstIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="19dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rideInfo"
+                app:srcCompat="@drawable/dest_circle">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/secondIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstIcon"
+                app:srcCompat="@drawable/dest_circle">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/upsonHall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currLoc"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+
+                app:layout_constraintLeft_toRightOf="@+id/firstIcon"
+                app:layout_constraintTop_toBottomOf="@+id/rideInfo">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/pickup"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:layout_marginLeft="188dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/rideInfo"
+                app:layout_constraintLeft_toRightOf="@+id/upsonHall"
+                app:layout_constraintRight_toRightOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/pickupTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pickupTime"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="3dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/pickup"
+                app:layout_constraintLeft_toRightOf="@+id/upsonHall"
+                app:layout_constraintRight_toRightOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/addy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addy1"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/upsonHall"
+                app:layout_constraintLeft_toRightOf="@+id/firstIcon">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/urisHall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/finalDest"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+
+                app:layout_constraintLeft_toRightOf="@+id/secondIcon"
+                app:layout_constraintTop_toBottomOf="@+id/addy1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/addy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addy2"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/urisHall"
+                app:layout_constraintLeft_toRightOf="@+id/secondIcon">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/dropoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/dropoff"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:layout_marginLeft="200dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/pickupTime"
+                app:layout_constraintLeft_toRightOf="@+id/urisHall"
+                app:layout_constraintRight_toRightOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pickupTime"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="3dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/dropoff"
+                app:layout_constraintLeft_toRightOf="@+id/upsonHall"
+                app:layout_constraintRight_toRightOf="parent">
+
+            </TextView>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/rideInfoCard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/profpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/nextRideInCardLeftMarg"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="@dimen/nextRideInCardTopMarg"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:srcCompat="@drawable/prof_pic">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/driverName"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/profpic"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="30dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/profpic"
+                app:srcCompat="@drawable/phone">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textupcomingRides"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/driverNum"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/phone">
+
+            </TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
