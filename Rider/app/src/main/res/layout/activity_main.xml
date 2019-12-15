@@ -41,7 +41,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pickup">
+        </Button>
 
+        <Button
+            android:id="@+id/dropOffButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drop-Off">
         </Button>
 
     </LinearLayout>

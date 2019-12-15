@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PickupActivity">
+    tools:context=".DropOffActivity">
 
     <TextView
         android:id="@+id/cancelText"
@@ -19,19 +19,19 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/pickupText"
+        android:id="@+id/dropOffText"
         style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
         android:layout_marginLeft="90dp"
         android:layout_marginTop="@dimen/drawable_margin"
-        android:text="@string/pickup_text"
+        android:text="@string/drop_off_header"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@id/cancelText"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/pickupEditText"
+        android:id="@+id/dropOffEditText"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginLeft="@dimen/label_margin"
@@ -45,10 +45,10 @@
         android:inputType="text"
         android:padding="5dp"
         android:textColorHint="@color/blackColor"
-        app:layout_constraintTop_toBottomOf="@id/pickupText" />
+        app:layout_constraintTop_toBottomOf="@id/dropOffText" />
 
     <TextView
-        android:id="@+id/pickup_home"
+        android:id="@+id/dropOff_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/left_label_margin"
@@ -59,10 +59,10 @@
         android:drawableLeft="@drawable/ic_home_black_24dp"
         android:drawablePadding="@dimen/view_margin"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickupEditText"/>
+        app:layout_constraintTop_toBottomOf="@id/dropOffEditText"/>
 
     <TextView
-        android:id="@+id/pickup_gates"
+        android:id="@+id/dropOff_gates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/left_label_margin"
@@ -73,10 +73,10 @@
         android:drawableLeft="@drawable/ic_location_on_black_24dp"
         android:drawablePadding="@dimen/view_margin"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickup_home"/>
+        app:layout_constraintTop_toBottomOf="@id/dropOff_home"/>
 
     <TextView
-        android:id="@+id/pickup_barton"
+        android:id="@+id/dropOff_barton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/left_label_margin"
@@ -87,9 +87,9 @@
         android:drawableLeft="@drawable/ic_location_on_black_24dp"
         android:drawablePadding="@dimen/view_margin"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickup_gates"/>
+        app:layout_constraintTop_toBottomOf="@id/dropOff_gates"/>
     <TextView
-        android:id="@+id/pickup_psb"
+        android:id="@+id/dropOff_psb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/left_label_margin"
@@ -100,6 +100,8 @@
         android:drawableLeft="@drawable/ic_location_on_black_24dp"
         android:drawablePadding="@dimen/view_margin"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickup_barton"/>
+        app:layout_constraintTop_toBottomOf="@id/dropOff_barton"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

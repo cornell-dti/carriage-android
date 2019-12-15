@@ -39,5 +39,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btn_dropoff = findViewById(R.id.dropOffButton) as Button
+        btn_dropoff.setOnClickListener {
+            val intent = Intent(this, DropOffActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

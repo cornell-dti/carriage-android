@@ -2,14 +2,13 @@ package com.dti.rider
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Html
 
-class PickupActivity : AppCompatActivity() {
+class DropOffActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pickup)
-        
+        setContentView(R.layout.activity_dropoff)
+
         getSupportActionBar()?.hide()
     }
 }
