@@ -9,4 +9,5 @@
     <dimen name="split_margin">30dp</dimen>
     <dimen name="label_margin">16dp</dimen>
     <dimen name="left_label_margin">14dp</dimen>
+    <dimen name="drawable_margin">25dp</dimen>
 </resources>

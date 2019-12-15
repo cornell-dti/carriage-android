@@ -18,7 +18,7 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        getSupportActionBar()?.setTitle(Html.fromHtml("<font color='#070707'>Schedule</font>"))
+        getSupportActionBar()?.setTitle(Html.fromHtml("<font color='#FFFFFF'>Schedule</font>"))
         getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp)
         name = findViewById(R.id.nameText)
         email = findViewById(R.id.emailText)

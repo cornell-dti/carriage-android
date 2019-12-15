@@ -33,5 +33,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btn_pickup = findViewById(R.id.pickupButton) as Button
+        btn_pickup.setOnClickListener {
+            val intent = Intent(this, PickupActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

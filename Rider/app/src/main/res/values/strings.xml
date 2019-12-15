@@ -38,4 +38,6 @@
     <string name="wheelchair">Wheelchair</string>
     <string name="additional_notes">Additional Notes</string>
     <string name="send_request">Send Request</string>
+    <string name="cancel">Cancel</string>
+    <string name="pickup_text">Pickup</string>
 </resources>
