@@ -10,7 +10,7 @@
     <string name="sign_in">Sign In</string>
     <string name="your_profile">Your Profile</string>
     <string name="request_text">+  Request Ride</string>
-    <string name="app_server_client_id">322014396101-u417c510hoasgjioroootltc8ki3qm56.apps.googleusercontent.com</string>
+    <string name="app_server_client_id">322014396101-q7vtrj4rg7h8tlknl1gati2lkbdbu3sp.apps.googleusercontent.com</string>
     <string name="server_client_id">322014396101-8u88pc3q00v6dre4doa64psr9349bhum.apps.googleusercontent.com</string>
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
@@ -28,4 +28,14 @@
     <string name="sign_out">Sign Out</string>
     <string name="request_ride">Request Ride</string>
     <string name="profile_picture">Profile Picture</string>
+    <string name="pickup">Pickup*</string>
+    <string name="drop_off">Drop-off*</string>
+    <string name="location">Location</string>
+    <string name="date_time"><![CDATA[Date & Time]]></string>
+    <string name="date">Date*</string>
+    <string name="drop_off_time">Drop-off Time*</string>
+    <string name="accessibility_request">Accessibility Request</string>
+    <string name="wheelchair">Wheelchair</string>
+    <string name="additional_notes">Additional Notes</string>
+    <string name="send_request">Send Request</string>
 </resources>

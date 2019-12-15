@@ -7,4 +7,6 @@
     <dimen name="view_margin">10dp</dimen>
     <dimen name="header_margin">20dp</dimen>
     <dimen name="split_margin">30dp</dimen>
+    <dimen name="label_margin">16dp</dimen>
+    <dimen name="left_label_margin">14dp</dimen>
 </resources>

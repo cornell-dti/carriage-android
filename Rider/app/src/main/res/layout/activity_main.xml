@@ -28,6 +28,14 @@
 
         </Button>
 
+        <Button
+            android:id="@+id/requestButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Request">
+
+        </Button>
+
     </LinearLayout>
 
     <LinearLayout

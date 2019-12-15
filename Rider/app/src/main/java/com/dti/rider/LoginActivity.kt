@@ -6,10 +6,8 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.*
-import com.google.android.gms.common.Scopes
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.common.api.Scope
 import com.google.android.gms.tasks.Task
 import cz.msebera.android.httpclient.HttpResponse
 import cz.msebera.android.httpclient.NameValuePair
@@ -21,7 +19,6 @@ import cz.msebera.android.httpclient.impl.client.HttpClientBuilder
 import cz.msebera.android.httpclient.message.BasicNameValuePair
 import cz.msebera.android.httpclient.util.EntityUtils
 import java.io.IOException
-import kotlin.collections.ArrayList
 
 
 class LoginActivity : AppCompatActivity() {
@@ -37,13 +34,14 @@ class LoginActivity : AppCompatActivity() {
         //Initializing Views
         signInButton = findViewById(R.id.sign_in_button)
 
-        val serverClientId = getString(R.string.server_client_id)
+        // val serverClientId = getString(R.string.server_client_id)
+        val appServerClientId = getString(R.string.app_server_client_id)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestScopes(Scope(Scopes.DRIVE_APPFOLDER))
-            .requestServerAuthCode(serverClientId)
+            //.requestScopes(Scope(Scopes.DRIVE_APPFOLDER))
+            //.requestServerAuthCode(serverClientId)
+            .requestIdToken(appServerClientId)
             .requestEmail()
             .requestProfile()
-            .requestIdToken(getString(R.string.server_client_id))
             .build()
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
@@ -85,13 +83,10 @@ class LoginActivity : AppCompatActivity() {
             val email = account?.getEmail()
             val split = email?.split("@")
             val domain = split?.get(1)
-            if (domain == "cornell.edu") {
-                startActivity(Intent(this, MainActivity::class.java))
-            }
-            val httpClient: HttpClient = HttpClientBuilder.create().build();
-            val httpPost = HttpPost("http://10.0.2.2:3000")
-//"https://localhost:3000/verify"
+
             try {
+                val httpClient: HttpClient = HttpClientBuilder.create().build();
+                val httpPost = HttpPost("10.0.2.2:3000")
                 val nameValuePairs: MutableList<NameValuePair> =
                     ArrayList<NameValuePair>(1)
                 nameValuePairs.add(BasicNameValuePair("idToken", idToken))
@@ -99,7 +94,9 @@ class LoginActivity : AppCompatActivity() {
                 val response: HttpResponse = httpClient.execute(httpPost)
                 val statusCode = response.statusLine.statusCode
                 val responseBody = EntityUtils.toString(response.entity)
-                Log.i("Succesful Sign In", "Signed in as: $responseBody")
+                Log.i("Successful Sign In", "Signed in as: $responseBody")
+                startActivity(Intent(this, MainActivity::class.java))
+
             } catch (e: ClientProtocolException) {
                 Log.e("Token Error", "Error sending ID token to backend.", e)
             } catch (e: IOException) {
