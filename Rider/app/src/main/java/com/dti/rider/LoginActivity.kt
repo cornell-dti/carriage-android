@@ -18,7 +18,6 @@ import cz.msebera.android.httpclient.client.methods.HttpPost
 import cz.msebera.android.httpclient.impl.client.HttpClientBuilder
 import cz.msebera.android.httpclient.message.BasicNameValuePair
 import cz.msebera.android.httpclient.util.EntityUtils
-import java.io.IOException
 
 
 class LoginActivity : AppCompatActivity() {
@@ -97,14 +96,11 @@ class LoginActivity : AppCompatActivity() {
                 Log.i("Successful Sign In", "Signed in as: $responseBody")
                 startActivity(Intent(this, MainActivity::class.java))
 
-            } catch (e: ClientProtocolException) {
-                Log.e("Token Error", "Error sending ID token to backend.", e)
-            } catch (e: IOException) {
+            } catch (e: Exception) {
                 Log.e("Token Error", "Error sending ID token to backend.", e)
             }
 
         } catch (e: ApiException) {
-            Log.w("Google Sign In Error", "signInResult:failed code: " + e.statusCode)
             Log.w(
                 "Google Sign In Error",
                 "signInResult:failed message: " + GoogleSignInStatusCodes.getStatusCodeString(e.statusCode)

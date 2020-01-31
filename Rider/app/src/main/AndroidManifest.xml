@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DropOffActivity"></activity>
-        <activity android:name=".PickupActivity" />
+        <activity android:name=".PickUpActivity" />
         <activity android:name=".RequestActivity" />
         <activity
             android:name=".SettingsActivity"

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".SettingsActivity">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/CVSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,10 +26,10 @@
             android:textColor="@color/blackColor"
             android:textStyle="bold" />
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/CVAInfo"
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -91,9 +91,9 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/CVLocations"
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -152,15 +152,14 @@
                 android:drawablePadding="@dimen/image_margin"
                 android:gravity="center_vertical"
                 android:hint="@string/add_favorites"
-                app:layout_constraintTop_toTopOf="@id/locationSplit"></EditText>
-
+                app:layout_constraintTop_toTopOf="@id/locationSplit"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/CVPrivacy"
         android:layout_width="match_parent"
         android:layout_height="160dp"
@@ -176,25 +175,25 @@
                 style="@style/TextAppearance.MaterialComponents.Headline5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginStart="@dimen/image_margin"
                 android:text="@string/privacy"
                 android:textColor="@color/blackColor"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"></TextView>
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/dataText"
                 style="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginStart="@dimen/image_margin"
                 android:layout_marginTop="5dp"
-                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                 android:drawablePadding="@dimen/image_margin"
                 android:paddingBottom="15dp"
                 android:text="@string/choose_what_data_you_share_with"
                 android:textColor="@color/grayColor"
-                app:layout_constraintTop_toBottomOf="@+id/privacyText"></TextView>
+                app:layout_constraintTop_toBottomOf="@+id/privacyText"/>
 
             <TextView
                 android:id="@+id/legalText"
@@ -205,7 +204,7 @@
                 android:text="@string/legal"
                 android:textColor="@color/blackColor"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@+id/dataText"></TextView>
+                app:layout_constraintTop_toBottomOf="@+id/dataText"/>
 
             <TextView
                 android:id="@+id/termText"
@@ -219,22 +218,22 @@
                 android:paddingBottom="15dp"
                 android:text="@string/terms_of_service_privacy_policy"
                 android:textColor="@color/grayColor"
-                app:layout_constraintTop_toBottomOf="@+id/legalText"></TextView>
+                app:layout_constraintTop_toBottomOf="@+id/legalText"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_sign_out"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="@dimen/view_margin"
         android:background="@color/colorPrimary"
-        android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
-        android:paddingLeft="150dp"
-        android:paddingRight="170dp"
+        android:drawableStart="@drawable/ic_exit_to_app_black_24dp"
+        android:paddingStart="150dp"
+        android:paddingEnd="170dp"
         android:text="@string/sign_out"
         android:textAlignment="center"
         android:textAllCaps="false"

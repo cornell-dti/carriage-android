@@ -9,6 +9,7 @@ import android.widget.Button
 class MainActivity : AppCompatActivity() {
 
 
+    //This is just temporary, will use Jessie's new implementation once merged
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         val btn_pickup = findViewById(R.id.pickupButton) as Button
         btn_pickup.setOnClickListener {
-            val intent = Intent(this, PickupActivity::class.java)
+            val intent = Intent(this, PickUpActivity::class.java)
             startActivity(intent)
         }
 
