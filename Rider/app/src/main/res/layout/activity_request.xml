@@ -11,9 +11,9 @@
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:paddingLeft="@dimen/label_margin"
         android:background="@color/blackColor"
         android:gravity="center_vertical"
+        android:paddingLeft="@dimen/label_margin"
         android:text="@string/request_ride"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -36,8 +36,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/border_width"
-                android:clipToPadding="false"
                 android:clipChildren="false"
+                android:clipToPadding="false"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="15dp"
                 app:cardPreventCornerOverlap="false">
@@ -95,8 +95,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/border_width"
-                android:clipToPadding="false"
                 android:clipChildren="false"
+                android:clipToPadding="false"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="15dp"
                 app:cardPreventCornerOverlap="false">
@@ -153,8 +153,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/border_width"
-                android:clipToPadding="false"
                 android:clipChildren="false"
+                android:clipToPadding="false"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="15dp"
                 app:cardPreventCornerOverlap="false">
@@ -196,8 +196,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/border_width"
-                android:clipToPadding="false"
                 android:clipChildren="false"
+                android:clipToPadding="false"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="15dp"
                 app:cardPreventCornerOverlap="false">
@@ -252,10 +252,11 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
             android:layout_marginRight="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            android:layout_marginTop="@dimen/margin"
             android:background="@color/blackColor"
+            android:contentDescription="@string/request_ride"
             android:drawableLeft="@drawable/ic_near_me_black_24dp"
             android:paddingLeft="100dp"
             android:paddingRight="100dp"
@@ -263,8 +264,7 @@
             android:textAllCaps="false"
             android:textColor="@color/whiteColor"
             android:textSize="20sp"
-            android:contentDescription="@string/request_ride"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </com.google.android.material.card.MaterialCardView>
 

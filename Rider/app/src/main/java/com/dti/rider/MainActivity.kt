@@ -22,12 +22,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btn_settings = findViewById(R.id.settingsButton) as Button
-        btn_settings.setOnClickListener {
-            val intent = Intent(this, SettingsActivity::class.java)
-            startActivity(intent)
-        }
-
         val btn_request = findViewById(R.id.requestButton) as Button
         btn_request.setOnClickListener {
             val intent = Intent(this, RequestActivity::class.java)
@@ -43,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         val btn_dropoff = findViewById(R.id.dropOffButton) as Button
         btn_dropoff.setOnClickListener {
             val intent = Intent(this, DropOffActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btn_settings = findViewById(R.id.settingsButton) as Button
+        btn_settings.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
         }
 

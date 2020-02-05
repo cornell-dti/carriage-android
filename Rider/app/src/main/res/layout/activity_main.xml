@@ -21,13 +21,6 @@
 
         </Button>
 
-        <Button
-            android:id="@+id/settingsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Settings">
-
-        </Button>
 
         <Button
             android:id="@+id/requestButton"
@@ -41,15 +34,19 @@
             android:id="@+id/pickupButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pickup">
-        </Button>
+            android:text="Pickup"></Button>
 
         <Button
             android:id="@+id/dropOffButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Drop-Off">
-        </Button>
+            android:text="Drop-Off"></Button>
+
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"></Button>
 
     </LinearLayout>
 
@@ -70,11 +67,11 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
             android:background="@color/blackColor"
+            android:contentDescription="@string/request_ride"
             android:text="@string/request_text"
             android:textAllCaps="false"
             android:textColor="@color/whiteColor"
-            android:textSize="20sp"
-            android:contentDescription="@string/request_ride"/>
+            android:textSize="20sp" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -16,7 +16,7 @@
         android:text="@string/cancel"
         android:textColor="@color/blackColor"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pickupText"
@@ -28,7 +28,7 @@
         android:text="@string/pickup_text"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@id/cancelText"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/pickupEditText"
@@ -38,69 +38,69 @@
         android:layout_marginTop="@dimen/left_label_margin"
         android:layout_marginRight="@dimen/left_label_margin"
         android:background="@drawable/et_style"
-        android:textSize="12sp"
-        android:gravity="top"
         android:ellipsize="start"
+        android:gravity="top"
         android:hint="@string/pickup"
         android:inputType="text"
         android:padding="5dp"
         android:textColorHint="@color/blackColor"
+        android:textSize="12sp"
         app:layout_constraintTop_toBottomOf="@id/pickupText" />
 
     <TextView
         android:id="@+id/pickup_home"
+        style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/left_label_margin"
         android:layout_marginLeft="@dimen/drawable_margin"
-        style="@style/TextAppearance.AppCompat.Medium"
-        android:text="Home (151 Dryden Road)"
-        android:textColor="@color/blackColor"
+        android:layout_marginTop="@dimen/left_label_margin"
         android:drawableLeft="@drawable/ic_home_black_24dp"
         android:drawablePadding="@dimen/view_margin"
+        android:text="Home (151 Dryden Road)"
+        android:textColor="@color/blackColor"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickupEditText"/>
+        app:layout_constraintTop_toBottomOf="@id/pickupEditText" />
 
     <TextView
         android:id="@+id/pickup_gates"
+        style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/left_label_margin"
         android:layout_marginStart="@dimen/drawable_margin"
-        style="@style/TextAppearance.AppCompat.Medium"
-        android:text="Bill &amp; Melinda Gates Hall"
-        android:textColor="@color/blackColor"
+        android:layout_marginTop="@dimen/left_label_margin"
         android:drawableStart="@drawable/ic_location_on_black_24dp"
         android:drawablePadding="@dimen/view_margin"
+        android:text="Bill &amp; Melinda Gates Hall"
+        android:textColor="@color/blackColor"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickup_home"/>
+        app:layout_constraintTop_toBottomOf="@id/pickup_home" />
 
     <TextView
         android:id="@+id/pickup_barton"
+        style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/left_label_margin"
         android:layout_marginLeft="@dimen/drawable_margin"
-        style="@style/TextAppearance.AppCompat.Medium"
-        android:text="Barton Hall"
-        android:textColor="@color/blackColor"
+        android:layout_marginTop="@dimen/left_label_margin"
         android:drawableLeft="@drawable/ic_location_on_black_24dp"
         android:drawablePadding="@dimen/view_margin"
+        android:text="Barton Hall"
+        android:textColor="@color/blackColor"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickup_gates"/>
+        app:layout_constraintTop_toBottomOf="@id/pickup_gates" />
 
     <TextView
         android:id="@+id/pickup_psb"
+        style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/left_label_margin"
         android:layout_marginStart="@dimen/drawable_margin"
-        style="@style/TextAppearance.AppCompat.Medium"
-        android:text="Physical Sciences Building"
-        android:textColor="@color/blackColor"
+        android:layout_marginTop="@dimen/left_label_margin"
         android:drawableStart="@drawable/ic_location_on_black_24dp"
         android:drawablePadding="@dimen/view_margin"
+        android:text="Physical Sciences Building"
+        android:textColor="@color/blackColor"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickup_barton"/>
+        app:layout_constraintTop_toBottomOf="@id/pickup_barton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

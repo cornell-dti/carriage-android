@@ -29,16 +29,22 @@
     <string name="request_ride">Request Ride</string>
     <string name="profile_picture">Profile Picture</string>
     <string name="pickup">Pickup*</string>
-    <string name="drop_off">Drop-off*</string>
+    <string name="drop_off">Drop-off</string>
     <string name="location">Location</string>
     <string name="date_time"><![CDATA[Date & Time]]></string>
     <string name="date">Date*</string>
     <string name="drop_off_time">Drop-off Time*</string>
     <string name="accessibility_request">Accessibility Request</string>
-    <string name="wheelchair">Wheelchair</string>
     <string name="additional_notes">Additional Notes</string>
     <string name="send_request">Send Request</string>
     <string name="cancel">Cancel</string>
     <string name="pickup_text">Pickup</string>
-    <string name="drop_off_header">Drop-Off</string>
+    <string name="drop_off_header">Drop-off</string>
+    <string name="sign_in_success">Successful Sign In</string>
+    <string name="token_error">Token Error</string>
+    <string name="gsi_error">Google Sign In Error</string>
+    <string name="failed">Failed</string>
+    <string name="wheelchair">Wheelchair</string>
+    <string name="is_selected">is selected</string>
+    <string name="schedule">Schedule</string>
 </resources>

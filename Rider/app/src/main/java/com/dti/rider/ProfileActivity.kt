@@ -1,8 +1,10 @@
 package com.dti.rider
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
+import android.text.Spanned
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import android.widget.TextView
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -18,8 +20,9 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        getSupportActionBar()?.setTitle(Html.fromHtml("<font color='#FFFFFF'>Schedule</font>"))
-        getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp)
+        supportActionBar?.title = getString(R.string.schedule)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp)
+
         name = findViewById(R.id.nameText)
         email = findViewById(R.id.emailText)
 
@@ -31,8 +34,5 @@ class ProfileActivity : AppCompatActivity() {
             name.setText(personName)
             email.setText(personEmail)
         }
-
     }
-
-
 }

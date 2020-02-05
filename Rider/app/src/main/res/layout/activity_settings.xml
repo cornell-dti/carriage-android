@@ -39,11 +39,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profilePicture"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginStart="@dimen/image_margin"
                 android:layout_marginTop="@dimen/image_margin"
                 android:src="@drawable/ic_person_black_24dp"
                 app:civ_border_color="#d3d3d3"
@@ -57,7 +57,7 @@
                 style="@style/TextAppearance.MaterialComponents.Headline5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="16dp"
                 android:text="Aiden Kim"
                 android:textColor="@color/blackColor"
@@ -69,9 +69,9 @@
                 style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="32dp"
-                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                 android:drawablePadding="165dp"
                 android:text="+1 657-500-1311"
                 app:layout_constraintLeft_toLeftOf="@+id/profilePicture"
@@ -112,7 +112,7 @@
                 android:layout_marginLeft="@dimen/image_margin"
                 android:text="@string/locations"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"></TextView>
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <EditText
@@ -120,22 +120,22 @@
                 style="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/text_margin"
-                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginStart="@dimen/image_margin"
                 android:layout_marginTop="@dimen/split_margin"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_home_black_24dp"
-                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableStart="@drawable/ic_home_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                 android:drawablePadding="@dimen/image_margin"
                 android:gravity="center_vertical"
                 android:hint="@string/add_home"
-                app:layout_constraintTop_toTopOf="parent"></EditText>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:id="@+id/locationSplit"
                 android:layout_width="350dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="75dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:background="@android:color/darker_gray"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@id/homeText" />
@@ -145,14 +145,14 @@
                 style="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/text_margin"
-                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginStart="@dimen/image_margin"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_star_border_black_24dp"
-                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableStart="@drawable/ic_star_border_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                 android:drawablePadding="@dimen/image_margin"
                 android:gravity="center_vertical"
                 android:hint="@string/add_favorites"
-                app:layout_constraintTop_toTopOf="@id/locationSplit"/>
+                app:layout_constraintTop_toTopOf="@id/locationSplit" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -179,7 +179,7 @@
                 android:text="@string/privacy"
                 android:textColor="@color/blackColor"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/dataText"
@@ -193,39 +193,39 @@
                 android:paddingBottom="15dp"
                 android:text="@string/choose_what_data_you_share_with"
                 android:textColor="@color/grayColor"
-                app:layout_constraintTop_toBottomOf="@+id/privacyText"/>
+                app:layout_constraintTop_toBottomOf="@+id/privacyText" />
 
             <TextView
                 android:id="@+id/legalText"
                 style="@style/TextAppearance.MaterialComponents.Headline5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginStart="@dimen/image_margin"
                 android:text="@string/legal"
                 android:textColor="@color/blackColor"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@+id/dataText"/>
+                app:layout_constraintTop_toBottomOf="@+id/dataText" />
 
             <TextView
                 android:id="@+id/termText"
                 style="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/image_margin"
+                android:layout_marginStart="@dimen/image_margin"
                 android:layout_marginTop="5dp"
-                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                 android:drawablePadding="@dimen/image_margin"
                 android:paddingBottom="15dp"
                 android:text="@string/terms_of_service_privacy_policy"
                 android:textColor="@color/grayColor"
-                app:layout_constraintTop_toBottomOf="@+id/legalText"/>
+                app:layout_constraintTop_toBottomOf="@+id/legalText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/button_sign_out"
         android:layout_width="match_parent"
         android:layout_height="50dp"

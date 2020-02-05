@@ -2,9 +2,11 @@ package com.dti.rider
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
+import android.text.Spanned
 import android.view.View
 import android.widget.CheckBox
 import android.widget.TextView
@@ -19,7 +21,7 @@ class RequestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request)
 
-        getSupportActionBar()?.setTitle(Html.fromHtml("<font color='#FFFFFF'>Schedule</font>"))
+        supportActionBar?.title = getString(R.string.schedule)
         getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_24dp)
         getSupportActionBar()?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#000000")))
 
@@ -29,12 +31,12 @@ class RequestActivity : AppCompatActivity() {
 
     private fun Check(v: View) {
         if (wcCheckBox.isChecked()) {
-            val wcMsg = "Wheelchair"
+            val wcMsg = getString(R.string.wheelchair)
             Toast.makeText(
-                this, wcMsg + "is selected",
+                this, wcMsg + getString(R.string.is_selected),
                 Toast.LENGTH_LONG
             ).show();
         }
-
     }
+
 }
